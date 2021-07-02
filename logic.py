@@ -29,6 +29,6 @@ class calc:
 			self.e.delete(0,END)
 
 	def button_delete(self):
-			pass
-
-
+			self.txt=self.e.get()[:-1]
+			self.e.delete(0,END)
+			self.e.insert(0,self.txt)
