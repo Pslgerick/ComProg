@@ -47,7 +47,7 @@ num_7 = Button(gui, text = '7', padx = 30, pady = 30, font = font_num, bg = 'gra
 num_8 = Button(gui, text = '8', padx = 30, pady = 30, font = font_num, bg = 'gray86', command= lambda: click(8) )
 num_9 = Button(gui, text = '9', padx = 30, pady = 30, font = font_num, bg = 'gray86', command= lambda: click(9) )
 num_0 = Button(gui, text = '0', padx = 30, pady = 30, font = font_num, bg = 'gray86', command= lambda: click(0) )
-dot = Button(gui, text = '.', padx = 31, pady = 30, font = font_num, bg = 'gray86', command= lambda: click('.') ) #no function yet
+dot = Button(gui, text = '.', padx = 31, pady = 30, font = font_num, bg = 'gray86', command= lambda: click('.') )
 
 #operators
 btn_add = Button(gui, text = '+', padx = 30, pady = 30, font = 'Times', bg = 'SeaGreen2', command=button_add )
@@ -55,7 +55,7 @@ btn_subtract = Button(gui, text = '-', padx = 30, pady = 30, font = 'Times', bg 
 btn_divide = Button(gui, text = '/', padx = 31, pady = 30, font = 'Times', bg = 'SeaGreen2', command=button_divide)
 btn_multiply = Button(gui, text = '*', padx = 30, pady = 30, font = 'Times', bg = 'SeaGreen2', command=button_multiply )
 btn_equal = Button(gui, text = '=', padx = 70, pady = 30, font = 'Times', bg = 'gold', command=button_equal)
-delete = Button(gui, text = 'DEL', padx = 20, pady = 30, font = 'Times', bg = 'yellow' ) #no function yet
+delete = Button(gui, text = 'DEL', padx = 20, pady = 30, font = 'Times', bg = 'yellow', command=delete)
 clear = Button(gui, text = 'CLR', padx = 18, pady = 30, font = 'Times', bg = 'yellow', command=clear)
 
 btn_exit = Button(gui, text = 'OFF', padx = 18, pady = 30, font = 'Times', bg = 'red', command=quit )
