@@ -3,7 +3,7 @@ import math
 
 class calc:
 
-	def click(self):
+	def click(self,argi):
 		self.e.insert(END, argi)
 
 	def operation(self):
