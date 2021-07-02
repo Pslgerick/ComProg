@@ -4,7 +4,7 @@ import math
 class calc:
 
 	def click(self):
-			pass
+		self.e.insert(END, argi)
 
 	def operation(self):
 		self.input = self.e.get()
