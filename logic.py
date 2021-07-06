@@ -29,10 +29,14 @@ class calc:
 			self.e.delete(0,END)
 			self.e.insert(0,self.value)
 
-	def clear(self):
+	def button_delete(self):
 			self.e.delete(0,END)
 
-	def button_delete(self):
+	def clear(self):
 			self.txt=self.e.get()[:-1]
 			self.e.delete(0,END)
 			self.e.insert(0,self.txt)
+# Driver Code
+root = Tk()
+obj=calc(root) 
+root.mainloop()
