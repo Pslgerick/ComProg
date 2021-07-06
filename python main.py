@@ -81,10 +81,10 @@ class calc:
 			btn_multiply=Button(master,text="x",width=8,height=4, fg="black",bg="SeaGreen2", command=lambda:self.click('x'))
 			btn_subtract=Button(master,text="-",width=8,height=4, fg="black",bg="SeaGreen2", command=lambda:self.click('-'))
 			btn_divide=Button(master,text="÷",width=8,height=4, fg="black",bg="SeaGreen2",command=lambda:self.click('÷'))
-			btn_percent=Button(master,text="%",width=8,height=4, fg="black",bg="red", command=lambda:self.click('%'))
+			btn_exit=Button(master,text="OFF",width=8,height=4, fg="black",bg="red", command=quit)
 			btn_equal=Button(master,text="=",width=18,height=4,fg="black", bg="gold",command=lambda:self.button_equal())
-			delete=Button(master,text='AC',width=8,height=4, fg="black", bg="yellow", command=lambda:self.button_delete())
-			clear=Button(master,text='CLR',width=8,height=4, fg="black",bg="yellow", command=lambda:self.clear())
+			delete=Button(master,text='DEL',width=8,height=4, fg="black", bg="yellow", command=lambda:self.button_delete())
+			clear=Button(master,text='AC',width=8,height=4, fg="black",bg="yellow", command=lambda:self.clear())
 
 			#For Operations
 			btn_multiply.grid(row = 2, column = 3)
@@ -93,8 +93,8 @@ class calc:
 			btn_subtract.grid(row = 3, column=4)
 			delete.grid(row = 1, column=3)
 			clear.grid(row = 1, column= 4)
-			btn_equal.grid(row = 4, column= 3, columnspan=2)
-			btn_percent.grid(row = 4, column = 2)
+			btn_equal.grid(row = 4, column= 2, columnspan=2)
+			btn_exit.grid(row = 4, column = 4)
 			
 
 # Driver Code
