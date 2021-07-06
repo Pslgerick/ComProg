@@ -8,7 +8,7 @@ class calc:
 
 	def operation(self):
 		self.input = self.e.get()
-		self.display = self.input.replace('/','/')
+		self.display = self.input.replace('÷','/')
 		self.display = self.display.replace('x','*')
 
 	def button_equal(self):
