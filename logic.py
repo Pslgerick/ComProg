@@ -16,6 +16,10 @@ class calc:
 
 		try:
 			self.value= eval(self.display)
+			
+			if isinstance (self.value, float):
+				if self.value - int(self.value) == 0:
+					self.value = round(self.value)
 
 		except SyntaxError or NameError:
 			self.e.delete(0,END)
