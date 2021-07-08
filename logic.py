@@ -4,7 +4,15 @@ import math
 class calc:
 
 	def click(self,argi):
-		self.e.insert(END, argi)
+		try:
+			if self.e.get() == "Syntax ERROR" or self.e.get()== "Enter Value First":
+				self.e.delete(0,END)
+
+		except SyntaxError or NameError:
+			self.e.delete(0,END)
+
+		else:
+			self.e.insert(END, argi)
 
 	def operation(self):
 		self.input = self.e.get()
@@ -72,6 +80,73 @@ class calc:
 		else:
 			self.sqval=math.pow(self.value,2)
 			ans = self.sqval
+			if isinstance (ans, float):
+				if ans - int(ans) == 0:
+					answer = round(ans)
+					self.e.delete(0,END)
+					self.e.insert(0,answer)
+				else:
+					self.e.delete(0,END)
+					self.e.insert(0,ans)
+					
+	def  sin (self):
+		self.operation()
+		try:
+			#evaluate the expression using the eval function
+			self.value = eval(self.display)
+			self.rad =  math.radians(self.value)
+
+		except SyntaxError or NameError:
+			self.e.delete(0,END)
+			self.e.insert(0,'Enter Value First!')
+		else:
+			self.sine = math.sin(self.rad)
+			ans = self.sine
+			if isinstance (ans, float):
+				if ans - int(ans) == 0:
+					answer = round(ans)
+					self.e.delete(0,END)
+					self.e.insert(0,answer)
+				else:
+					self.e.delete(0,END)
+					self.e.insert(0,ans)
+	
+
+	def  cos (self):
+		self.operation()
+		try:
+			#evaluate the expression using the eval function
+			self.value = eval(self.display)
+			self.rad =  math.radians(self.value)
+
+		except SyntaxError or NameError:
+			self.e.delete(0,END)
+			self.e.insert(0,'Enter Value First')
+		else:
+			self.cosine = math.cos(self.rad)
+			ans = self.cosine
+			if isinstance (ans, float):
+				if ans - int(ans) == 0:
+					answer = round(ans)
+					self.e.delete(0,END)
+					self.e.insert(0,answer)
+				else:
+					self.e.delete(0,END)
+					self.e.insert(0,ans)
+	
+	def  tan (self):
+		self.operation()
+		try:
+			#evaluate the expression using the eval function
+			self.value = eval(self.display)
+			self.rad =  math.radians(self.value)
+
+		except SyntaxError or NameError:
+			self.e.delete(0,END)
+			self.e.insert(0,'Enter Value First!')
+		else:
+			self.tangent = math.tan(self.rad)
+			ans = self.tangent
 			if isinstance (ans, float):
 				if ans - int(ans) == 0:
 					answer = round(ans)
