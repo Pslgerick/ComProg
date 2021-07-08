@@ -5,7 +5,15 @@ from tkinter import font as tkFont
 class calc:
 
 	def click(self,argi):
-		self.e.insert(END, argi)
+		try:
+			if self.e.get() == "Syntax ERROR" or self.e.get()== "Enter Value First":
+				self.e.delete(0,END)
+
+		except SyntaxError or NameError:
+			self.e.delete(0,END)
+
+		else:
+			self.e.insert(END, argi)
 
 	def operation(self):
 		try: 
@@ -182,12 +190,7 @@ class calc:
 			num_8=Button(master,text="8",width=8,height=4, fg="black",bg="gray86", command=lambda:self.click(8))
 			num_9=Button(master,text="9",width=8,height=4, fg="black",bg="gray86", command=lambda:self.click(9))
 			dot=Button(master,text=".",width=8,height=4, fg="black",bg="gray86", command=lambda:self.click('.'))
-			squareroot=Button(master,text="√",width=8,height=2, fg="black",bg="gray86", command=lambda:self.squareroot())
-			square=Button(master,text="x²",width=8,height=2, fg="black",bg="gray86", command=lambda:self.square())
-			cos=Button(master,text="cos",width=8,height=2, fg="black",bg="gray86", command=lambda:self.cos())
-			sin=Button(master,text="sin",width=8,height=2, fg="black",bg="gray86", command=lambda:self.sin())
-			tan=Button(master,text="tan",width=8,height=2, fg="black",bg="gray86", command=lambda:self.tan())
-			exponent=Button(master,text="^",width=8,height=2, fg="black",bg="gray86", command=lambda:self.click('^'))
+			
 			# For Numbers
 			num_7.grid(row = 3, column = 0)
 			num_8.grid(row = 3, column = 1)
@@ -202,15 +205,9 @@ class calc:
 			num_3.grid(row = 5, column = 2)
 
 			num_0.grid(row = 6, column = 0)
-			dot.grid(row = 6, column=2)
+			dot.grid(row = 6, column=1)
 
-			squareroot.grid(row = 2, column = 0)
-			square.grid(row = 2, column = 1)
-
-			cos.grid(row = 1, column = 0)
-			sin.grid(row = 1, column = 1)
-			tan.grid(row = 1, column = 2)
-			exponent.grid(row = 2, column = 2)
+			
 
 			# Operation Buttons
 			btn_off=Button(master,text="OFF",width=16,height=4, fg="black",bg="#F5C37E", command=quit)
@@ -222,6 +219,12 @@ class calc:
 			btn_equal=Button(master,text="=",width=18,height=4,fg="black", bg="#F16100",command=lambda:self.button_equal())
 			delete=Button(master,text='⌫',width=8,height=4, fg="black", bg="#F16100", command=lambda:self.button_delete())
 			clear=Button(master,text='AC',width=8,height=4, fg="black",bg="#F16100", command=lambda:self.clear())
+			squareroot=Button(master,text="√",width=8,height=2, fg="black",bg="gray86", command=lambda:self.squareroot())
+			square=Button(master,text="x²",width=8,height=2, fg="black",bg="gray86", command=lambda:self.square())
+			cos=Button(master,text="cos",width=8,height=2, fg="black",bg="gray86", command=lambda:self.cos())
+			sin=Button(master,text="sin",width=8,height=2, fg="black",bg="gray86", command=lambda:self.sin())
+			tan=Button(master,text="tan",width=8,height=2, fg="black",bg="gray86", command=lambda:self.tan())
+			exponent=Button(master,text="^",width=8,height=2, fg="black",bg="gray86", command=lambda:self.click('^'))
 
 
 			#For Operations
@@ -233,7 +236,14 @@ class calc:
 			delete.grid(row = 3, column=3)
 			clear.grid(row = 3, column= 4)
 			btn_equal.grid(row = 6, column= 3, columnspan=2)
-			pi.grid(row = 6, column = 1)
+			pi.grid(row = 6, column = 2)
+			squareroot.grid(row = 2, column = 0)
+			square.grid(row = 2, column = 1)
+
+			sin.grid(row = 1, column = 0)
+			cos.grid(row = 1, column = 1)
+			tan.grid(row = 1, column = 2)
+			exponent.grid(row = 2, column = 2)
 			
 
 # Driver Code
