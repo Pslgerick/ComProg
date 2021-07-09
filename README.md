@@ -1,25 +1,18 @@
 # SagingPinay.py
 
-**Final Requirement for the ECE115.2**
+**Final Requirement for ECE115.2**
 1. Written using Python
 2. Used tkinter for the Graphic User Interface and;
 3. Used math imports for the Calculator Logic
 
 **Our Calculator Features:**
 1. 0-9 Numeric Keypads
-2.	Basic Operations that also follows the correct order of operation:
-  a.	Addition
-  b.	Subtraction
-  c.	Multiplication
-  d.	Division
+2.	Basic Operations that also follows the correct order of operation: Addition, Subtraction, Multiplication, Division
 4.	Decimal
 5.	Delete All Function (AC)
 6.	Delete one by one (Backspace Symbol)
 7.	Off button. 
-8.	Trig Functions:
-  a.	Sin
-  b.	Cos
-  c.	Tan
+8.	Trig Functions: Sin, Cos, Tan
 7.	Square root
 8.	Square
 9.	Exponents
