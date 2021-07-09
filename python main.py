@@ -172,7 +172,7 @@ class calc:
 					self.e.insert(0,ans)
 	def __init__(self,master):
 			"""Constructor method"""
-			master.title('Calulator')
+			master.title('Calculator')
 			master.geometry()
 			self.e = Entry(master,font=("Crimson",14,'bold'))
 			self.e.grid(row=0,column=0,columnspan=5,ipadx=15, ipady=5, pady = 15)
